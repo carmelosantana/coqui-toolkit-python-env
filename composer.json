@@ -1,0 +1,61 @@
+{
+    "name": "coquibot/coqui-toolkit-python-env",
+    "description": "Python virtual environment and dependency management toolkit for Coqui — create, inspect, install, and remove venvs using pip, conda, or uv",
+    "type": "library",
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Carmelo Santana"
+        }
+    ],
+    "keywords": [
+        "php-agents",
+        "python",
+        "virtualenv",
+        "venv",
+        "pip",
+        "conda",
+        "uv",
+        "coqui",
+        "toolkit"
+    ],
+    "require": {
+        "php": "^8.4"
+    },
+    "require-dev": {
+        "carmelosantana/php-agents": "^0.7",
+        "pestphp/pest": "^3.0",
+        "phpstan/phpstan": "^2.0"
+    },
+    "autoload": {
+        "psr-4": {
+            "CoquiBot\\Toolkits\\PythonEnv\\": "src/"
+        }
+    },
+    "autoload-dev": {
+        "psr-4": {
+            "CoquiBot\\Toolkits\\PythonEnv\\Tests\\": "tests/"
+        }
+    },
+    "config": {
+        "optimize-autoloader": true,
+        "sort-packages": true,
+        "allow-plugins": {
+            "pestphp/pest-plugin": true
+        }
+    },
+    "scripts": {
+        "test": "pest",
+        "analyse": "phpstan analyse"
+    },
+    "extra": {
+        "php-agents": {
+            "toolkits": [
+                "CoquiBot\\Toolkits\\PythonEnv\\PythonEnvToolkit"
+            ],
+            "description": "Python virtual environment management — create, inspect, install deps, list packages, run commands, and remove venvs using pip, conda, or uv"
+        }
+    },
+    "minimum-stability": "dev",
+    "prefer-stable": true
+}
