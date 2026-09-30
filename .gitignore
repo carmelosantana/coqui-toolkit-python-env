@@ -2,3 +2,6 @@ vendor/
 .phpstan-cache/
 .phpunit.result.cache
 composer.lock
+.env
+*.cache
+.phpunit.cache/
